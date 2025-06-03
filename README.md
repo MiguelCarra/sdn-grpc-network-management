@@ -53,6 +53,10 @@ El proyecto se divide en dos escenarios principales implementados en Jupyter Not
   
 ## Instalación y Configuración
 
+Existen dos maneras de configurar el entorno para ejecutar las simulaciones:
+
+**Método 1: Configuración Manual (Recomendado para un entorno limpio)**
+
 1.  **Clonar el repositorio:**
     ```bash
     git clone https://github.com/tu_usuario/sdn-grpc-network-management.git
@@ -65,17 +69,47 @@ El proyecto se divide en dos escenarios principales implementados en Jupyter Not
     source venv/bin/activate  # En Windows: venv\Scripts\activate
     ```
 
-3.  **Instalar dependencias:**
+3.  **Instalar dependencias desde `requirements.txt`:**
+    Asegúrate de estar en la raíz del repositorio clonado.
     ```bash
     pip install -r requirements.txt
     ```
 
 4.  **Generar Stubs gRPC:**
-    Desde la carpeta `src/`:
+    Navega a la carpeta `src/` y ejecuta el siguiente comando:
     ```bash
+    cd src
     python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. sdn_northbound.proto
     ```
-    Esto generará los archivos `sdn_northbound_pb2.py` y `sdn_northbound_pb2_grpc.py` necesarios.
+    Esto generará los archivos `sdn_northbound_pb2.py` y `sdn_northbound_pb2_grpc.py` necesarios dentro de la carpeta `src/` (si estos todavía no estan).
+
+**Método 2: Ejecución Directa desde los Jupyter Notebooks (Menos recomendado para producción)**
+
+Si prefieres una ejecución rápida directamente desde los cuadernos de Jupyter (`sdn_simulation_analysis.ipynb` y `sdn_topology_management.ipynb` ubicados en la carpeta `src/`), puedes hacerlo descomentando y ejecutando las primeras celdas de cada notebook.
+
+*   **Paso 1 (Dentro de cada notebook): Instalación de Dependencias**
+    Descomenta y ejecuta la celda que contiene:
+    ```python
+    # !pip install grpcio-tools matplotlib numpy seaborn
+    ```
+    *Nota: Esto instalará las librerías globalmente si no estás en un entorno virtual, o en el entorno activo del kernel de Jupyter.*
+
+*   **Paso 2 (Dentro de cada notebook): Creación del archivo `.proto`**
+    Descomenta y ejecuta la celda que contiene:
+    ```python
+    # with open('sdn_northbound.proto', 'w') as f:
+    #     f.write(""" ...contenido del proto... """)
+    ```
+    *Nota: Esto creará (o sobrescribirá) el archivo `sdn_northbound.proto` en el mismo directorio donde se está ejecutando el notebook (idealmente `src/`).*
+
+*   **Paso 3 (Dentro de cada notebook): Generación de Stubs gRPC**
+    Descomenta y ejecuta la celda que contiene:
+    ```python
+    # !python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. sdn_northbound.proto
+    ```
+    *Nota: Esto generará los archivos `_pb2.py` y `_pb2_grpc.py` en el mismo directorio, necesarios para los imports posteriores (si estos todavía no estan).*
+
+Una vez completados estos pasos (ya sea el Método 1 o el Método 2), puedes proceder a ejecutar el resto de las celdas en los notebooks.
 
 ## Uso / Ejecución de las Simulaciones
 
@@ -103,7 +137,7 @@ Ambos cuadernos de Jupyter se encuentran en la carpeta `src/`.
 
 ## Resultados y Demostración
 
-Los resultados detallados, análisis comparativo SNMP vs gRPC/gNMI, y conclusiones se encuentran en el **[Informe Completo del Proyecto](docs/Informe_SDN_gRPC_vfinal.pdf)**.
+Los resultados detallados, análisis comparativo SNMP vs gRPC/gNMI, y conclusiones se encuentran en el **[Informe Completo del Proyecto](docs/Informe_SDN_gRPC.pdf)**.
 
 A continuación, se muestran algunos ejemplos visuales de los resultados obtenidos:
 
@@ -111,53 +145,20 @@ A continuación, se muestran algunos ejemplos visuales de los resultados obtenid
 
 *Ejemplo de Uso de CPU y Tráfico (desde `sdn_simulation_analysis.ipynb`):*
 
-    
-
-IGNORE_WHEN_COPYING_START
-Use code with caution.
-IGNORE_WHEN_COPYING_END
-
 (Captura de pantalla de Figuras 8 y 9 del informe o generada por el notebook)
-images/codigo1_uso_cpu_trafico.png
+images/codigo1_uso_cpu_trafico.jpg
 
-      
 *Ejemplo de Distribuciones de CPU y Tráfico (desde `sdn_simulation_analysis.ipynb`):*
 
-    
-
-IGNORE_WHEN_COPYING_START
-Use code with caution.
-IGNORE_WHEN_COPYING_END
-
 (Captura de pantalla de Figuras 10 y 11 del informe o generada por el notebook)
-images/codigo1_distribuciones.png
+images/codigo1_distribuciones.jpg
 
-      
 *Ejemplo de Mapa de Calor de CPU (desde `sdn_simulation_analysis.ipynb`):*
 
-    
-
-IGNORE_WHEN_COPYING_START
-Use code with caution.
-IGNORE_WHEN_COPYING_END
-
 (Captura de pantalla de Figura 12 del informe o generada por el notebook)
-images/codigo1_heatmap_cpu.png
+images/codigo1_heatmap_cpu.jpg
 
-      
 *Ejemplo de Salida de Telemetría Multi-dispositivo (desde `sdn_topology_management.ipynb`):*
-
-    
-
-IGNORE_WHEN_COPYING_START
-Use code with caution.
-IGNORE_WHEN_COPYING_END
-
-(Captura de pantalla de la salida de consola, similar a la Figura 13 del informe)
-images/codigo2_telemetria_output.png
-
-      
-O una transcripción parcial del output como texto:
 
 🟢 Servidor iniciado - Topología: Core-Access (3 capas)
 🔧 Configuración access_switch1: VLAN 100 agregada a access_switch1. VLANs actuales: [100]
