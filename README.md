@@ -7,9 +7,9 @@
 Este proyecto explora la gestión de Redes Definidas por Software (SDN) utilizando gRPC y gNMI como alternativa moderna a SNMP. Se implementa una interfaz Northbound para la monitorización y configuración de dispositivos de red simulados, demostrando las capacidades de telemetría en tiempo real y gestión centralizada.
 
 **Desarrollado por:**
-*   [Miguel Carralero Lanchares](https://www.linkedin.com/in/miguel-carralero-lanchares/)
-*   [Francisco Orcha](https://www.linkedin.com/in/francisco-orcha-38a5831b3/)
-*   [Jaime Marcos](https://www.linkedin.com/in/jaime-marcos-diaz-406100205/)
+* [Miguel Carralero Lanchares](https://www.linkedin.com/in/miguel-carralero-lanchares/) <a href="https://www.linkedin.com/in/miguel-carralero-lanchares/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="16" style="vertical-align:middle; margin-left:4px"/></a>
+* [Francisco Orcha](https://www.linkedin.com/in/francisco-orcha-38a5831b3/) <a href="https://www.linkedin.com/in/francisco-orcha-38a5831b3/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="16" style="vertical-align:middle; margin-left:4px"/></a>
+* [Jaime Marcos](https://www.linkedin.com/in/jaime-marcos-diaz-406100205/) <a href="https://www.linkedin.com/in/jaime-marcos-diaz-406100205/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="16" style="vertical-align:middle; margin-left:4px"/></a>
 
 ## Descripción General
 
