@@ -55,8 +55,8 @@ El proyecto se divide en dos escenarios principales implementados en Jupyter Not
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone https://github.com/tu_usuario/nombre_del_repositorio.git
-    cd nombre_del_repositorio
+    git clone https://github.com/tu_usuario/sdn-grpc-network-management.git
+    cd sdn-grpc-network-management
     ```
 
 2.  **Crear un entorno virtual (recomendado):**
