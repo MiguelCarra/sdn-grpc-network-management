@@ -141,37 +141,30 @@ Los resultados detallados, análisis comparativo SNMP vs gRPC/gNMI, y conclusion
 
 A continuación, se muestran algunos ejemplos visuales de los resultados obtenidos:
 
-**(Aquí podrías insertar las imágenes de `images/` si las generas)**
-
 *Ejemplo de Uso de CPU y Tráfico (desde `sdn_simulation_analysis.ipynb`):*
+![Captura de pantalla de Figuras 8 y 9 del informe o generada por el notebook](images/codigo1_uso_cpu_trafico.png)
 
-(Captura de pantalla de Figuras 8 y 9 del informe o generada por el notebook)
-images/codigo1_uso_cpu_trafico.jpg
 
 *Ejemplo de Distribuciones de CPU y Tráfico (desde `sdn_simulation_analysis.ipynb`):*
+![Captura de pantalla de Figuras 10 y 11 del informe o generada por el notebook](images/codigo1_distribuciones.png)
 
-(Captura de pantalla de Figuras 10 y 11 del informe o generada por el notebook)
-images/codigo1_distribuciones.jpg
 
 *Ejemplo de Mapa de Calor de CPU (desde `sdn_simulation_analysis.ipynb`):*
+![Captura de pantalla de Figura 12 del informe o generada por el notebook](images/codigo1_heatmap_cpu.png)
 
-(Captura de pantalla de Figura 12 del informe o generada por el notebook)
-images/codigo1_heatmap_cpu.jpg
 
 *Ejemplo de Salida de Telemetría Multi-dispositivo (desde `sdn_topology_management.ipynb`):*
+<pre>🟢 Servidor iniciado - Topología: Core-Access (3 capas)  
+🔧 Configuración access_switch1: VLAN 100 agregada a access_switch1. VLANs actuales: [100]  
+🔧 Configuración core_switch: VLAN 200 agregada a core_switch. VLANs actuales: [200]  
 
-🟢 Servidor iniciado - Topología: Core-Access (3 capas)
-🔧 Configuración access_switch1: VLAN 100 agregada a access_switch1. VLANs actuales: [100]
-🔧 Configuración core_switch: VLAN 200 agregada a core_switch. VLANs actuales: [200]
+📊 Métricas en vivo - core_switch:  
+⏱️ 17:57:46 | CPU: 83.42% | Tráfico: 359,703 bps  
+⏱️ 17:57:47 | CPU: 75.07% | Tráfico: 270,624 bps  
+🔴 [Sistema] CPU crítica en core_switch - Acción: Aislar dispositivo  
+⏱️ 17:57:49 | CPU: 100.0% | Tráfico: 850,888 bps  
+... </pre>  
 
-📊 Métricas en vivo - core_switch:
-⏱️ 17:57:46 | CPU: 83.42% | Tráfico: 359,703 bps
-⏱️ 17:57:47 | CPU: 75.07% | Tráfico: 270,624 bps
-🔴 [Sistema] CPU crítica en core_switch - Acción: Aislar dispositivo
-⏱️ 17:57:49 | CPU: 100.0% | Tráfico: 850,888 bps
-...
-
-      
 ## Contenido del Informe (docs/Informe_SDN_gRPC_vfinal.pdf)
 
 El informe completo incluye:
