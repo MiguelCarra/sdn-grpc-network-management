@@ -1,5 +1,5 @@
 # Gestión de Redes SDN mediante gRPC/gNMI
-## Proyecto del Máster en Ingeniería de Telecomunicaciones - EPS/UAM
+## Proyecto del Máster en Ingeniería de Telecomunicaciones - Asignatura de Gestión de Redes - EPS/UAM
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Python Version](https://img.shields.io/badge/python-3.9%2B-blue.svg)
