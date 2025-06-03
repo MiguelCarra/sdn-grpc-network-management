@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+service SDNNorthbound {
+  rpc UpdateVlan(VlanConfig) returns (ConfigResponse) {}
+  rpc StreamMetrics(DeviceQuery) returns (stream MetricData) {}
+  rpc ReportFault(FaultNotification) returns (FaultAck) {}
+}
+
+message VlanConfig {
+  string device_id = 1;
+  uint32 vlan_id = 2;
+  string name = 3;
+}
+
+message ConfigResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+message DeviceQuery {
+  string device_id = 1;
+  uint32 interval = 2;
+}
+
+message MetricData {
+  float cpu = 1;
+  uint64 traffic = 2;
+  string timestamp = 3;
+}
+
+message FaultNotification {
+  string device_id = 1;
+  string description = 2;
+}
+
+message FaultAck {
+  bool received = 1;
+  string timestamp = 2;
+}
