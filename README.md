@@ -40,8 +40,8 @@ El proyecto se divide en dos escenarios principales implementados en Jupyter Not
 +-- README.md
 +-- requirements.txt
 +-- docs/
-|   +-- Informe_SDN_gRPC_vfinal.pdf  (Informe detallado del proyecto)
-+-- images/                             (Capturas de resultados para este README)
+|   +-- Informe_SDN_gRPC_vfinal.pdf    (Informe detallado del proyecto)
++-- images/                            (Capturas de resultados para este README)
 |   +-- ... (ej: graficos_codigo1.png, output_codigo2.png)
 +-- src/
     +-- sdn_northbound.proto           (Definición del servicio gRPC)
