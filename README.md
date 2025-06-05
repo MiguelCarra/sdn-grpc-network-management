@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Python Version](https://img.shields.io/badge/python-3.9%2B-blue.svg)
 
-Este proyecto explora la gestión de Redes Definidas por Software (SDN) utilizando gRPC y gNMI como alternativa moderna a SNMP. Se implementa una interfaz Northbound para la monitorización y configuración de dispositivos de red simulados, demostrando las capacidades de telemetría en tiempo real y gestión centralizada.
+Este proyecto explora la gestión de Redes Definidas por Software (SDN) utilizando gRPC y gNMI como alternativa moderna a SNMP. Se implementa una interfaz Northbound para la monitorización y configuración de dispositivos de red simulados, demostrando las capacidades de telemetría en tiempo real y gestión.
 
 **Desarrollado por:**
 * [Miguel Carralero Lanchares](https://www.linkedin.com/in/miguel-carralero-lanchares/) <a href="https://www.linkedin.com/in/miguel-carralero-lanchares/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="16" style="vertical-align:middle; margin-left:4px"/></a>
