@@ -42,7 +42,7 @@ El proyecto se divide en dos escenarios principales implementados en Jupyter Not
 +-- docs/
 |   +-- Informe_SDN_gRPC_vfinal.pdf    (Informe detallado del proyecto)
 +-- images/                            (Capturas de resultados para este README)
-|   +-- ... (ej: graficos_codigo1.png, output_codigo2.png)
+|   +-- ...                            (ej: graficos_codigo1.png, output_codigo2.png)
 +-- src/
     +-- sdn_northbound.proto           (Definición del servicio gRPC)
     +-- sdn_simulation_analysis.ipynb  (Notebook Código 1: Simulación y análisis de un dispositivo)
@@ -50,7 +50,7 @@ El proyecto se divide en dos escenarios principales implementados en Jupyter Not
     +-- sdn_northbound_pb2.py          (Stubs Python generados por protoc)
     +-- sdn_northbound_pb2_grpc.py     (Stubs Python gRPC generados por protoc)
 ```
-  
+
 ## Instalación y Configuración
 
 Existen dos maneras de configurar el entorno para ejecutar las simulaciones:
