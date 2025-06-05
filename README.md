@@ -59,7 +59,7 @@ Existen dos maneras de configurar el entorno para ejecutar las simulaciones:
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone https://github.com/tu_usuario/sdn-grpc-network-management.git
+    git clone https://github.com/MiguelCarra/sdn-grpc-network-management.git
     cd sdn-grpc-network-management
     ```
 
