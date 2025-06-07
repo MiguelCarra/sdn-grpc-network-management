@@ -50,6 +50,7 @@ El proyecto se divide en dos escenarios principales implementados en Jupyter Not
     +-- sdn_topology_management.ipynb  (Notebook Código 2: Gestión de topología multi-dispositivo)
     +-- sdn_northbound_pb2.py          (Stubs Python generados por protoc)
     +-- sdn_northbound_pb2_grpc.py     (Stubs Python gRPC generados por protoc)
++-- ...
 ```
 
 ## Instalación y Configuración
